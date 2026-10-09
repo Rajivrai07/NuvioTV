@@ -39,6 +39,7 @@ import com.nuvio.tv.ui.screens.player.playerBackOpensCurrentEpisodeStreams
 import com.nuvio.tv.ui.screens.plugin.PluginScreen
 import com.nuvio.tv.ui.screens.search.DiscoverScreen
 import com.nuvio.tv.ui.screens.search.SearchScreen
+import com.nuvio.tv.ui.screens.live.LiveScreen
 import com.nuvio.tv.ui.screens.settings.AboutScreen
 import com.nuvio.tv.ui.screens.settings.LayoutSettingsScreen
 import com.nuvio.tv.ui.screens.settings.LicensesAttributionsScreen
@@ -1158,6 +1159,12 @@ private fun PlaybackNavHost(
                         )
                     )
                 }
+            )
+        }
+
+        composable(Screen.Live.route) {
+            LiveScreen(
+                showBuiltInHeader = !hideBuiltInHeaders,
             )
         }
 
